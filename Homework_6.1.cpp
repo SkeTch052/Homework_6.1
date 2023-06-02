@@ -4,7 +4,8 @@
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    double num1, num2, act;
+    double num1, num2;
+    int act;
     std::cout << "Введите первое число: ";
     std::cin >> num1;
     std::cout << "Введите второе число: ";
