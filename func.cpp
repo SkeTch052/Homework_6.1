@@ -1,26 +1,23 @@
 #include "func.h"
 
-int sum(int x, int y) {
-    return x + y;
-}
-int sub(int x, int y) {
-    return x - y;
-}
-int multi(int x, int y) {
-    return x * y;
-}
-int divis(int x, int y) {
-    return x / y;
-}
-int exp(int x, int y) {
-    int tmp = x;
-    if (y == 0) {
-        return 1;
+double sum(double x, double y) { return x + y; }
+double sub(double x, double y) { return x - y; }
+double multi(double x, double y) { return x * y; }
+double divis(double x, double y) { return x / y; }
+double power(double x, double y)
+{
+    double result = 1;
+    int loop;
+    if (y < 0) {
+        loop = -1 * y;
+    } else {
+        loop = y;
     }
-    else {
-        for (int i = 1; i < y; i++) {
-            x *= tmp;
-        }
-        return x;
+    for (int i = 0; i < loop; ++i) {
+        result *= x;
     }
+    if (y < 0) {
+        result = 1 / result;
+    }
+    return result;
 }

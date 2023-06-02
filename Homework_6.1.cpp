@@ -4,7 +4,7 @@
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    int num1, num2, act;
+    double num1, num2, act;
     std::cout << "Введите первое число: ";
     std::cin >> num1;
     std::cout << "Введите второе число: ";
@@ -24,7 +24,7 @@ int main() {
             std::cout << num1 << " / " << num2 << " = " << divis(num1, num2) << std::endl;
         } 
     } else if (act == 5) {
-        std::cout << num1 << " в степени " << num2 << " = " << exp(num1, num2) << std::endl;
+        std::cout << num1 << " в степени " << num2 << " = " << power(num1, num2) << std::endl;
     }
     return 0;
 }
